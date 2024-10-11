@@ -1,7 +1,8 @@
 запуск:
-  cd client
-    npm i
-    npm start
-  cd backend
-    npm i
-    npm run dev
+cd client
+npm i
+npm start
+cd ..
+cd backend
+npm i
+npm run dev
