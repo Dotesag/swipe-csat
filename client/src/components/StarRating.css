@@ -1,0 +1,13 @@
+.star-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    transition: color 0.2s; /* Добавляем плавный переход цвета */
+}
+
+.star.filled {
+    color: gold; /* Цвет заполненной звезды */
+}

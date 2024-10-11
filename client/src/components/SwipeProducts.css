@@ -1,0 +1,243 @@
+/* Полупрозрачный контейнер подсказки */
+.swipe-hint-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Затемненный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Сама подсказка */
+  .swipe-hint {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 80%;
+    animation: scale-up 0.5s ease; /* Анимация увеличения */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    color: #333;
+  }
+  
+  .swipe-hint p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  /* Анимация стрелок */
+  .animated-arrows {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    margin: 0 auto;
+  }
+  
+  .arrow-left,
+  .arrow-right {
+    font-size: 30px;
+    color: #333;
+    animation: arrow-pulse 1s infinite; /* Пульсация стрелок */
+  }
+  
+  .arrow-left {
+    animation-direction: alternate;
+  }
+  
+  .arrow-right {
+    animation-direction: alternate-reverse;
+  }
+  
+  .swipe-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .product-card {
+    text-align: center;
+  }
+  
+  .arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .arrow-left {
+    left: 10px;
+  }
+  
+  .arrow-right {
+    right: 10px;
+  }
+  
+  .progress-indicator {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
+  
+  .swipe-hint-container {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    animation: fadeOut 4s forwards;
+  }
+  
+  .animated-arrows {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .arrow-left, .arrow-right {
+    font-size: 1.5rem;
+    margin: 0 10px;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  
+
+  /* Анимация увеличения подсказки */
+  @keyframes scale-up {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .swipe-container {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiping {
+    transform: translateX(-100%); /* Или любое другое значение для эффекта свайпа */
+  }
+
+
+
+
+  
+  .product-card.swiping {
+    opacity: 0; /* Уменьшаем прозрачность при свайпе */
+  }
+  
+  .product-card {
+    cursor: grab;
+  }
+  
+  .product-card:active {
+    cursor: grabbing;
+    user-select: none; /* Отключаем выделение текста во время перетаскивания */
+  }
+  
+  .swipe-container {
+    overflow: hidden; /* Прячем любые элементы, выходящие за границы контейнера */
+  }
+  
+
+
+
+  
+  /* Анимация пульсации стрелок */
+  @keyframes arrow-pulse {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(10px);
+    }
+  }
+  
+  /* Прогресс-бар */
+  .progress-indicator {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #6c757d;
+  }
+  
+  /* Общие стили для продукта */
+  .swipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background-color: #f8f9fa;
+    user-select: none;
+    position: relative;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 320px;
+    margin: 20px;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  .swipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    background-color: #f8f9fa;
+    user-select: none;
+    position: relative;
+  }
+  
+  .product-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 320px;
+    margin: 20px;
+  }
+  
+  .progress-indicator {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #6c757d;
+  }
+  
+  /* Новый стиль для сообщения о завершении списка товаров */
+  .swipe-container h2 {
+    color: #dc3545; /* Цвет для сообщения о завершении */
+    font-size: 24px;
+    font-weight: bold;
+  }
+    

@@ -1,0 +1,70 @@
+/* ProductDetail.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-detail {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-description {
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+.average-rating {
+    font-weight: bold;
+    color: #28a745;
+}
+
+.reviews-section {
+    margin-top: 30px;
+}
+
+.reviews-list {
+    list-style: none;
+    padding: 0;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-rating {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.review-comment {
+    margin-top: 5px;
+    color: #6c757d;
+}
+
+.loading, .error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #dc3545; /* Красный цвет для ошибок */
+}
